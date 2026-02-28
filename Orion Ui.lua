@@ -13,16 +13,23 @@ local OrionLib = {
 	Flags = {},
 	Themes = {
 		Default = {
-			Main = Color3.fromRGB(120, 0, 0),         
-			Second = Color3.fromRGB(40, 0, 0),      
-			Stroke = Color3.fromRGB(180, 0, 0),       
-			Divider = Color3.fromRGB(150, 0, 0),      
+			-- 背景（黒ベース）
+			Main = Color3.fromRGB(15, 15, 15),
+			Second = Color3.fromRGB(25, 25, 25),
 
-			Text = Color3.fromRGB(0, 0, 0),           
-			TextDark = Color3.fromRGB(30, 30, 30),
+			-- ネオン赤ライン
+			Stroke = Color3.fromRGB(255, 0, 0),
+			Divider = Color3.fromRGB(200, 0, 0),
 
-			Slider = Color3.fromRGB(220, 0, 0),       
-			SectionText = Color3.fromRGB(0, 0, 0)     
+			-- 文字（見やすさ最優先）
+			Text = Color3.fromRGB(255, 255, 255),
+			TextDark = Color3.fromRGB(200, 200, 200),
+
+			-- スライダー（ネオン赤）
+			Slider = Color3.fromRGB(255, 40, 40),
+
+			-- セクション文字
+			SectionText = Color3.fromRGB(255, 255, 255)
 		}
 	},
 	SelectedTheme = "Default",
