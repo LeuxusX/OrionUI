@@ -7,26 +7,27 @@ local HttpService = game:GetService("HttpService")
 local CoreGui = game:GetService("CoreGui")
 
 local OrionLib = {
-    Elements = {},
-    ThemeObjects = {},
-    Connections = {},
-    Flags = {},
-    Themes = {
-        Default = {
-            Main = Color3.fromRGB(0, 0, 0),          
-            Second = Color3.fromRGB(25, 0, 50),      
-            Stroke = Color3.fromRGB(180, 100, 255),  
-            Divider = Color3.fromRGB(180, 100, 255), 
-            Text = Color3.fromRGB(240, 240, 240),   
-            TextDark = Color3.fromRGB(200, 150, 255),
-            Slider = Color3.fromRGB(220, 120, 255), 
-            Toggle = Color3.fromRGB(180, 100, 255),  
-            Button = Color3.fromRGB(180, 100, 255)   
-        }
-    },
-    SelectedTheme = "Default",
-    Folder = nil,
-    SaveCfg = false
+	Elements = {},
+	ThemeObjects = {},
+	Connections = {},
+	Flags = {},
+	Themes = {
+		Default = {
+			Main = Color3.fromRGB(120, 0, 0),         
+			Second = Color3.fromRGB(40, 0, 0),      
+			Stroke = Color3.fromRGB(180, 0, 0),       
+			Divider = Color3.fromRGB(150, 0, 0),      
+
+			Text = Color3.fromRGB(0, 0, 0),           
+			TextDark = Color3.fromRGB(30, 30, 30),
+
+			Slider = Color3.fromRGB(220, 0, 0),       
+			SectionText = Color3.fromRGB(0, 0, 0)     
+		}
+	},
+	SelectedTheme = "Default",
+	Folder = nil,
+	SaveCfg = false
 }
 
 --Feather Icons https://github.com/evoincorp/lucideblox/tree/master/src/modules/util - Created by 7kayoh
@@ -847,51 +848,6 @@ function OrionLib:MakeWindow(WindowConfig)
 		})
 	end
 	
--- ===== Icon / Emoji Dictionary =====
-local CustomIcons = {
-    -- 画像アイコン
-    swords  = "rbxassetid://3926305904",
-    fight   = "rbxassetid://4483345998",
-    gun     = "rbxassetid://6031094678",
-    user    = "rbxassetid://4483345998",
-    skull   = "rbxassetid://6031091002",
-    info    = "rbxassetid://6031090990",
-    warning = "rbxassetid://6031094677",
-    success = "rbxassetid://6031097225",
-
-    -- 絵文字（Text用）
-    Zap     = "⚡",
-    Fire    = "🔥",
-    Star    = "⭐",
-    SkullE  = "☠️",
-}
-
--- ===== GetIcon =====
-local function GetIcon(icon)
-    if not icon or icon == "" then
-        return nil, nil
-    end
-
-    -- rbxassetid 直指定
-    if tostring(icon):find("rbxassetid://") then
-        return icon, "Image"
-    end
-
-    -- Dictionary参照
-    if CustomIcons[icon] then
-        local v = CustomIcons[icon]
-
-        -- 絵文字か？
-        if typeof(v) == "string" and not v:find("rbxassetid://") then
-            return v, "Text"
-        end
-
-        return v, "Image"
-    end
-
-    return nil, nil
-end
-
 -- Tab
 	local TabFunction = {}
 	function TabFunction:MakeTab(TabConfig)
