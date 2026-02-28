@@ -12,27 +12,28 @@ local OrionLib = {
 	Connections = {},
 	Flags = {},
 	Themes = {
-		Default = {
-			-- 背景（黒ベース）
-			Main = Color3.fromRGB(15, 15, 15),
-			Second = Color3.fromRGB(25, 25, 25),
+		DarkNeon = {
 
-			-- ネオン赤ライン
-			Stroke = Color3.fromRGB(255, 0, 0),
-			Divider = Color3.fromRGB(200, 0, 0),
+			-- 🖤 背景（深い黒）
+			Main = Color3.fromRGB(12, 12, 18),
+			Second = Color3.fromRGB(18, 18, 26),
 
-			-- 文字（見やすさ最優先）
-			Text = Color3.fromRGB(255, 255, 255),
-			TextDark = Color3.fromRGB(200, 200, 200),
+			-- ✨ 枠線（紫ネオン寄り）
+			Stroke = Color3.fromRGB(90, 70, 255),
+			Divider = Color3.fromRGB(60, 50, 160),
 
-			-- スライダー（ネオン赤）
-			Slider = Color3.fromRGB(255, 40, 40),
+			-- 📝 文字
+			Text = Color3.fromRGB(240, 240, 255),
+			TextDark = Color3.fromRGB(170, 170, 200),
+
+			-- 🎚 スライダー（クール紫）
+			Slider = Color3.fromRGB(120, 100, 255),
 
 			-- セクション文字
 			SectionText = Color3.fromRGB(255, 255, 255)
 		}
 	},
-	SelectedTheme = "Default",
+	SelectedTheme = "DarkNeon",
 	Folder = nil,
 	SaveCfg = false
 }
